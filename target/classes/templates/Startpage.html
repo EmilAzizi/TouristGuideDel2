@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+<form th:action="@{/Tivoli}" th:object="${attraction}" method="post">
+<h1>Welcome to Tivoli, here are the attractions: </h1>
+    <ul>
+        <li th:each="attraction : ${attraction}" th:text="${attraction.name}"></li>
+    </ul>
+</form>
+</body>
+</html>
